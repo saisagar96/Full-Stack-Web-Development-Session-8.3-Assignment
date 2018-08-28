@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8"/>
+        <h2>Print Multiplication Table using JavaScript</h2>
+    </head>
+    <body>
+        <!--Entering a Number in the text box-->
+        Enter a Number :
+        <input type="number" onchange="printTable(this)">
+	    <br>
+	    <br>
+	    <span id="mul"></span>
+        <script>
+            // Declaring a function named printTable
+             function printTable(num) 
+            {
+                var input = num.value;
+                var table="";
+                var number="";
+                for(i=1;i<=10;i++) // Declaring for loop from i value 1 to 10
+                {
+                    // multiplying the value of input and i for getting the value of number
+                    number = input * i;
+                    // Input i and number are required for displaying a table in the console
+                    table =  input + " * " + i + " = " + number;
+                    console.log(table);// printing the output in the console
+			        table = "";
+                }
+            }
+        </script>
+    </body>
+</html>       
